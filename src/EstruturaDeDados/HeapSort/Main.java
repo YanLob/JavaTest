@@ -77,7 +77,6 @@ public class Main {
             vetor[raiz] = aux;
 
             aplicarHeap(vetor, n, i);
-
         }
 
     }
