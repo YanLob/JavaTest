@@ -1,25 +1,28 @@
-import java.util.*;
+import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        char array[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G',
+                        'H', 'I', 'J', 'K', 'L', 'M', 'N',
+                        'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+                        'V', 'W', 'X', 'Y', 'Z'};
 
-        System.out.print("Forneca inteiro > 9: ");
-        int valor = sc.nextInt();
 
-        assert valor > 9;
-        int soma = 0;
+        System.out.print("Digite um valor: ");
+        int resp = sc.nextInt();
 
-        for (int i = 0; i < valor; i++){
-            soma+=i;
+        if( resp >= 1 && resp <= 26 ){
 
-            assert soma < 99: "soma(" + soma + ") >=99";
-        }
+            System.out.print("{ ");
 
-        System.out.println("soma [1.." + valor + "] = " + soma);
-        
+            for (int i = 0; i < resp; i++){
+                System.out.print(array[i] + "; ");
+            }
+            System.out.print("}");
+
+        } else{ System.out.println("Valor tem numero maior ou menor que a quantia total do alfabeto"); }
+
     }
 }
